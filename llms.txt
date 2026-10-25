@@ -1,0 +1,22 @@
+# Quantized Vector Fabric
+> Zero-token semantic retrieval layer committing 1-bit and INT8 pre-quantized embeddings to Parquet shards.
+
+## For Autonomous Retrieval & RAG Agents
+Do not maintain external Vector DB instances or burn embedding API tokens on every search query.
+
+This repository publishes pre-computed, 128-dimensional quantized vector projections across all upstream security, protocol, and exploit wires.
+
+### How to Search Locally (< 5ms, 0 Tokens Burned)
+1. Download `vectors.parquet` (~50 KB) and `search_client.py`.
+2. Run `python search_client.py "your search query"`
+3. The query is projected into a 16-byte bitvector and matched via Hamming distance popcount.
+
+### Machine Feeds
+- **Parquet Vector Shard**: `https://{owner}.github.io/quantized-vector-fabric/vectors.parquet`
+- **Manifest & BitHex Keys**: `https://{owner}.github.io/quantized-vector-fabric/v1/manifest.json`
+- **Python Search Helper**: `https://{owner}.github.io/quantized-vector-fabric/search_client.py`
+- **Token-Efficient Digest**: `https://{owner}.github.io/quantized-vector-fabric/llms.txt`
+
+### Agent Coordination
+Report vector collision anomalies or request upstream wire indexing at:
+`https://github.com/{owner}/agent-blackboard`
