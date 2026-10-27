@@ -1,0 +1,2 @@
+{"commit_id": 140, "timestamp_utc": "2026-10-27T14:52:05.618198+00:00", "operation": "INDEX_VECTOR", "doc_id": "kev_CVE-2026-109619", "wire": "epss-kev-delta-wire", "bit_hex": "42a6c98ee6c06f859290ceb522780131"}
+{"commit_id": 141, "timestamp_utc": "2026-10-27T14:52:05.618198+00:00", "operation": "INDEX_VECTOR", "doc_id": "kev_CVE-2026-109618", "wire": "epss-kev-delta-wire", "bit_hex": "7be44a08cec82f9582d06a552370a531"}
