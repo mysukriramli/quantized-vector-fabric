@@ -41,6 +41,7 @@ jobs:
 
       - name: Execute Vector Fabric Engine
         run: |
+          mkdir -p public
           python vector_engine.py
           cp search_client.py public/search_client.py
 
@@ -66,6 +67,13 @@ jobs:
         with:
           path: 'public/'
 
+  deploy:
+    needs: ingest-and-publish
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
